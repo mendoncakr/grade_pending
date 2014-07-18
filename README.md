@@ -17,7 +17,7 @@
 - Github Profile - https://github.com/vschaeperkoetter
 - [Email](victor.schaeperkoetter@yahoo.com)
 
-**Jack Wayne **
+**Jack Wayne**
 - Github Profile - https://github.com/jhwayne
 - [Email](jhwayne@umich.edu)
 
