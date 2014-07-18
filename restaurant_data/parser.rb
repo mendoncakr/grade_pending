@@ -1,16 +1,17 @@
 require 'csv'
-require 'pry'
+
 # , :encoding => 'ISO-8859-1'
 
 large_array = []
+small_array = []
 CSV.foreach("WebExtract.csv", :quote_char => "\x00") do |row|
 	counter = 0
-	while counter % 15 == 0
 		row.each do |att|
-			large_array << att.tr!('"', '').to_s.split()
-			counter += 1
-			break if counter == 15
-		end
+			small_array << att.tr!('"', '').to_s.strip
+			if small_array.length == 15
+				large_array << small_array
+				small_array = []
+			end
 	end
 	p large_array
 end
