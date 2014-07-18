@@ -1,7 +1,7 @@
 # GradePending
 
 ## Team
-**Kenneth M**
+**Kenneth Mendonca**
 - Github Profile- https://github.com/mendoncakr
 - [Email](mendonca.kr@gmail.com)
 
