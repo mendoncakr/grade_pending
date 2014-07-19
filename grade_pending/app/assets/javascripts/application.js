@@ -14,3 +14,28 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(function() {
+
+   var docHeight = $(document).height();
+
+   $("body").append("<div id='overlay'></div>");
+
+   $("#overlay")
+      .height(docHeight)
+      .css({
+         'opacity' : 0.8,
+         'position': 'absolute',
+         'top': 0,
+         'left': 0,
+         'background-color': '#222222',
+         'width': '100%',
+         'z-index': 5000
+      });
+
+     $('body').click(function(e){
+     	console.log("CLICK!");
+     	$('#overlay').fadeOut(1000);
+     }) 
+
+});
