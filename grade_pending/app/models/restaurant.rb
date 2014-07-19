@@ -1,7 +1,11 @@
 class Restaurant < ActiveRecord::Base
   attr_accessor :address, :latitude, :longitude
+
   geocoded_by :address
   after_validation :geocode
+
+  before_save :geocode
+  geocoded_by :address
 
 
 
@@ -9,7 +13,7 @@ class Restaurant < ActiveRecord::Base
   end
 
   def address
-    "48 Wall Street, 10005"
+   "#{self.building} " + " #{self.street} " + "#{self.zipcode}"
   end
   # before_save
 

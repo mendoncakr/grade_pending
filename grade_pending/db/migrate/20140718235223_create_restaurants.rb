@@ -1,21 +1,21 @@
 class CreateRestaurants < ActiveRecord::Migration
   def change
     create_table :restaurants do |t|
-      t.string :CAMIS
-      t.string :DBA
-      t.string :BORO
-      t.string :BUILDING
-      t.string :STREET
-      t.string :ZIPCODE
-      t.string :PHONE
-      t.string :CUISINECODE
-      t.string :INSPDATE
-      t.string :ACTION
-      t.string :VIOLCODE
-      t.string :SCORE
-      t.string :CURRENTGRADE
-      t.string :GRADEDATE
-      t.string :RECORDDATE
+      t.string :camis
+      t.string :dba
+      t.string :boro
+      t.string :building
+      t.string :street
+      t.string :zipcode
+      t.string :phone
+      t.string :cuisine
+      t.string :inspdate
+      t.string :action
+      t.string :violcode
+      t.string :score
+      t.string :currentgrade
+      t.string :gradedate
+      t.string :recorddate
 
       t.timestamps
     end
