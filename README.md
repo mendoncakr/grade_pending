@@ -1,3 +1,11 @@
+
+GradePending
+============
+TRELLO:
+https://trello.com/b/BblBjXGZ/restaraunt-data
+
+HAVE PHUN ;)
+=======
 # GradePending
 
 ## Team
@@ -44,3 +52,4 @@
 * Continuous Integration with [Travis CI](https://travis-ci.org/)
 * Deployed to Heroku
 * Follow the [bug report](./bug_reports.md] guidelines
+
