@@ -19,7 +19,8 @@ array = []
 #   Restaurant.create(row)
 # end
 
-Restaurant.create(camis: "12345148",
+Restaurant.create(
+    camis: "12345148",
     dba: "Sweet Eats",
     boro: "2",
     building: "586",
