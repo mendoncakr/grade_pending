@@ -5,17 +5,17 @@ class RestaurantsController < ApplicationController
     @restaurants.each do |restaurant|
       @restaurant_info = {
         "restaurant" => restaurant.dba,
-        "currentgrade" => restaurant.currentgrade
-        "zipcode" => restaurant.zipcode
+        "currentgrade" => restaurant.currentgrade,
+        "zipcode" => restaurant.zipcode,
         "currentgrade" => restaurant.currentgrade
       }
-      restaurant.save
+      restaurant.save_coordinates
     end
 
 
     @hash = Gmaps4rails.build_markers(@restaurants) do |restaurant, marker|
-      marker.lat restaurant.latitude
-      marker.lng restaurant.longitude
+      marker.lat restaurant.coord1
+      marker.lng restaurant.coord2
       marker.infowindow render_to_string(:partial => "/restaurants/info", :locals => { :object => @restaurant_info})
       marker.json({:current_grade=> restaurant.currentgrade})
     end
