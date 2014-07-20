@@ -13,23 +13,31 @@ RSpec.describe RestaurantsController, :type => :controller do
       get :index
       expect(response).to render_template(:index)
     end
-
   end
 
-  describe "GET #show" do
-    it "assigns the requested restaurant as @restaurant" do
-      restaurant = FactoryGirl.create(:restaurant)
-      get :show, id: restaurant
-      expect(assigns(:restaurant)).to eq(restaurant)
+  # describe "GET #show" do
+  #   it "assigns the requested restaurant as @restaurant" do
+  #     restaurant = FactoryGirl.create(:restaurant)
+  #     get :show, id: restaurant
+  #     expect(assigns(:restaurant)).to eq(restaurant)
+  #   end
+  # end
 
-    end
-    # it "populates an array of restaurants" do
-    #   restaurant = FactoryGirl.build(:restaurant)
-    #   # get :index
+  # describe "POST #show" do
+  #   it "populates an array of restaurants, searched by grade" do
+  #     restaurant = FactoryGirl.create(:restaurant)
 
-    #   expect(assigns(:restaurant)).to eq([restaurant])
-    #   #take in search/filter request, and create json object?
-    # end
-  end
+  #   #   restaurant = FactoryGirl.build(:restaurant)
+  #   #   # get :index
+  #   #   expect(assigns(:restaurant)).to eq([restaurant])
+  #   end
 
+  #   it "populates an array of restaurants, searched by zip" do
+  #     restaurant = FactoryGirl.create(:restaurant)
+
+  #   #   restaurant = FactoryGirl.build(:restaurant)
+  #   #   # get :index
+  #   #   expect(assigns(:restaurant)).to eq([restaurant])
+  #   end
+  # end
 end
