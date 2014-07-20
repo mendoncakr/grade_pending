@@ -1,6 +1,7 @@
 class Restaurant < ActiveRecord::Base
   attr_accessor :address, :latitude, :longitude
 
+
   validates :camis, presence: true
   validates_uniqueness_of :camis
   validates :dba, presence: true
@@ -19,10 +20,12 @@ class Restaurant < ActiveRecord::Base
   validates :recorddate, presence: true
 
 
-  # geocoded_by :address
-  # after_validation :geocode
-  # before_save :geocode
-  # geocoded_by :address
+
+  geocoded_by :address
+  after_validation :geocode
+  before_save :geocode
+  
+
 
 
   def address
@@ -31,6 +34,14 @@ class Restaurant < ActiveRecord::Base
 
   def self.downtown
     self.where(zipcode: "10005")
+  end
+
+
+  def save_coordinates
+    coords = Geocoder.coordinates(self.address)
+    self.coord1 = coords[0]
+    self.coord2 = coords[1]
+    self.save
   end
 
 end
