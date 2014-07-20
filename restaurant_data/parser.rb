@@ -7,13 +7,14 @@ small_array = []
 CSV.foreach("WebExtract.csv", :quote_char => "\x00") do |row|
 	counter = 0
 		row.each do |att|
-			small_array << att.tr!('"', '').to_s.strip
+			small_array << att.tr('"', '')
 			if small_array.length == 15
 				large_array << small_array
 				small_array = []
 			end
 	end
-	p large_array
+p large_array
+
 end
 
 
