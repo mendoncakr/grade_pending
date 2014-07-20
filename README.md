@@ -1,10 +1,15 @@
 
 GradePending
 ============
+
+An application to view restaraunts in NYC with their respective inspection grades provided by NYC Open Data.
+
+=======
 TRELLO:
 https://trello.com/b/BblBjXGZ/restaraunt-data
 
 HAVE PHUN ;)
+
 =======
 # GradePending
 
