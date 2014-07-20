@@ -8,7 +8,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :street
       t.string :zipcode
       t.string :phone
-      t.string :cuisine
+      t.string :cuisinecode
       t.string :inspdate
       t.string :action
       t.string :violcode

@@ -1,19 +1,16 @@
 class Restaurant < ActiveRecord::Base
-  attr_accessor :address, :latitude, :longitude, :dba
+  attr_accessor :address, :latitude, :longitude
   geocoded_by :address
   after_validation :geocode
   before_save :geocode
   geocoded_by :address
-  validates_uniqueness_of: :dba
 
 
   def address
-   "#{self.building} " + " #{self.street} " + "#{self.zipcode}"
+   "#{self.building} " + "#{self.street} " + "#{self.zipcode}"
   end
 
-  def delete_dups
-    self.where() && (self.INSPDATE)
-
-    # Name is   and inspection date is most recent
+  def self.downtown
+    self.where(zipcode: "10005")
   end
 end

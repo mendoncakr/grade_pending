@@ -11,13 +11,12 @@ file = File.expand_path('../WebExtract2.csv', __FILE__)
 array = []
 CSV.parse(File.open(file, 'r:iso-8859-1:utf-8'){|f| f.read}, col_sep: ',', headers: true) do |row|
    row = row.to_hash
-    row.each_pair do |key, value|
-        key.downcase
-        unless value.class == NilClass
-        value.gsub!(/\s\s+/, " ")
-    end
-   end
-  Restaurant.create(row)
+   #  row.each_pair do |key, value|
+   #      unless value.class == NilClass
+   #      value.strip
+   #  end
+   # end
+  Restaurant.create(row) if row["zipcode"] == "10005"
 end
 
 # Restaurant.create(camis: "12345148",
@@ -35,4 +34,17 @@ end
 #     currentgrade: "B",
 #     gradedate: Time.now.strftime("%Y-%m-%d %H:%M:%S"),
 #     recorddate: Time.now.strftime("%Y-%m-%d %H:%M:%S"))
+
+
+# row["camis"]
+# row["dba"]
+# row["camis"]
+# row["camis"]
+# row["camis"]
+# row["camis"]
+# row["camis"]
+# row["camis"]
+# row["camis"]
+# row["camis"]
+
 
