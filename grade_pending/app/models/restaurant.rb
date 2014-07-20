@@ -1,5 +1,5 @@
 class Restaurant < ActiveRecord::Base
-  attr_accessor :address, :latitude, :longitude
+  attr_accessor :address, :latitude, :longitude, :dba, :gmaps4rails_infowindow
 
   geocoded_by :address
   after_validation :geocode
@@ -7,14 +7,7 @@ class Restaurant < ActiveRecord::Base
   before_save :geocode
   geocoded_by :address
 
-
-
-  def create_address
-  end
-
   def address
    "#{self.building} " + " #{self.street} " + "#{self.zipcode}"
   end
-  # before_save
-
 end
