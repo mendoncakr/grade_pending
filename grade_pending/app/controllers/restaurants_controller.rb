@@ -21,5 +21,12 @@ class RestaurantsController < ApplicationController
     end
 
     # @restaurant_info = {:dba => @restaurant.dba,:current_grade=> @restaurant.currentgrade}
+
   end
+
+  def show
+    @restaurant
+  end
+
 end
+
