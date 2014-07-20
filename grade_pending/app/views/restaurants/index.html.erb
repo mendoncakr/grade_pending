@@ -6,18 +6,7 @@
 <h1> GradePending </h1>
 
 <div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
-
-<div class="infobox-wrapper">
-  <div id="infobox">
-    <%= @restaurant_info %>
-    <div>
-    </div>
-
-
-\
-
+  <div id="map" style='width: 1100px; height: 600px;'></div>
     <script type = "text/javascript">
     handler = Gmaps.build('Google');
     handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
@@ -27,3 +16,4 @@
       console.log(markers);
     });
     </script>
+</div>

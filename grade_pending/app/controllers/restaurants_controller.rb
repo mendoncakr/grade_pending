@@ -2,7 +2,7 @@ class RestaurantsController < ApplicationController
   def index
     @restaurants = Restaurant.first(2)
 
-    @restaurants.each do |restaurant|
+    @restaurants.each do |restaurant| 
       @restaurant_info = {
         "restaurant" => restaurant.dba,
         "currentgrade" => restaurant.currentgrade,

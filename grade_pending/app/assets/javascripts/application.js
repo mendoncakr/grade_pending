@@ -26,7 +26,7 @@ $(function() {
    $("#overlay")
       .height(docHeight)
       .css({
-         'opacity' : 0.8,
+         'opacity' : 0.95,
          'position': 'absolute',
          'top': 0,
          'left': 0,
