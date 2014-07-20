@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140719025917) do
     t.string   "street"
     t.string   "zipcode"
     t.string   "phone"
-    t.string   "cuisine"
+    t.string   "cuisinecode"
     t.string   "inspdate"
     t.string   "action"
     t.string   "violcode"
