@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ gem 'gmaps4rails'
+ gem 'geocoder'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -13,11 +15,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
-
-#Geocoder and Gmaps For Map
-gem 'geocoder'
-gem 'gmaps4rails'
-gem 'underscore-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -46,10 +43,8 @@ gem 'spring',        group: :development
 gem 'travis'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0'
-end
-
-group :test do
+  gem 'rspec-collection_matchers'
+  gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'faker'
@@ -58,5 +53,3 @@ group :test do
   gem 'database_cleaner'
   gem 'simplecov', :require => false
 end
-
-
