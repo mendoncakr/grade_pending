@@ -1,28 +1,27 @@
 class Restaurant < ActiveRecord::Base
-
   attr_accessor :address, :latitude, :longitude
 
 
-  # validates :camis, presence: true
-  # validates_uniqueness_of :camis
-  # validates :dba, presence: true
-  # validates :boro, presence: true
-  # validates :building, presence: true
-  # validates :street, presence: true
-  # validates :zipcode, presence: true
-  # validates :phone, presence: true
-  # validates :cuisinecode, presence: true
-  # validates :inspdate, presence: true
-  # validates :action, presence: true
-  # validates :violcode, presence: true
-  # validates :score, presence: true
-  # validates :currentgrade, presence: true
-  # validates :gradedate, presence: true
-  # validates :recorddate, presence: true
+  validates :camis, presence: true
+  validates_uniqueness_of :camis
+  validates :dba, presence: true
+  validates :boro, presence: true
+  validates :building, presence: true
+  validates :street, presence: true
+  validates :zipcode, presence: true
+  validates :phone, presence: true
+  validates :cuisinecode, presence: true
+  validates :inspdate, presence: true
+  validates :action, presence: true
+  validates :violcode, presence: true
+  validates :score, presence: true
+  validates :currentgrade, presence: true
+  validates :gradedate, presence: true
+  validates :recorddate, presence: true
 
 
   geocoded_by :address
-  # after_validation :geocode
+  after_validation :geocode
   before_save :geocode
   
 
@@ -40,7 +39,7 @@ class Restaurant < ActiveRecord::Base
     coords = Geocoder.coordinates(self.address)
     self.coord1 = coords[0]
     self.coord2 = coords[1]
-    self.save!
+    self.save
   end
 
 end

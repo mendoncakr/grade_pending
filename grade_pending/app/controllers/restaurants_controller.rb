@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
   def index
-    @restaurants = Restaurant.first(5)
+    @restaurants = Restaurant.first(2)
 
     @restaurants.each do |restaurant|
       @restaurant_info = {
@@ -9,7 +9,7 @@ class RestaurantsController < ApplicationController
         "zipcode" => restaurant.zipcode,
         "currentgrade" => restaurant.currentgrade
       }
-      restaurant.save_coordinates
+      # restaurant.save_coordinates
     end
 
 
