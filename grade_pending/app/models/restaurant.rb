@@ -19,10 +19,10 @@ class Restaurant < ActiveRecord::Base
   validates :recorddate, presence: true
 
 
-  geocoded_by :address
-  after_validation :geocode
-  before_save :geocode
-  geocoded_by :address
+  # geocoded_by :address
+  # after_validation :geocode
+  # before_save :geocode
+  # geocoded_by :address
 
 
   def address
