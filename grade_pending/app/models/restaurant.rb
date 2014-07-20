@@ -34,5 +34,8 @@ class Restaurant < ActiveRecord::Base
     self.where(zipcode: "10005")
   end
 
+  def last_inspected
+    self.where()
+  end
 
 end
