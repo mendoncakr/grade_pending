@@ -1,11 +1,11 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/apprentice/Desktop/vic/GradePending/grade_pending/app/helpers/application_helper.rb": [
+      "/Users/apprentice/Desktop/GradePending/grade_pending/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/apprentice/Desktop/vic/GradePending/grade_pending/app/controllers/restaurants_controller.rb": [
+      "/Users/apprentice/Desktop/GradePending/grade_pending/app/controllers/restaurants_controller.rb": [
         1,
         1,
         2,
@@ -20,14 +20,14 @@
         null,
         null
       ],
-      "/Users/apprentice/Desktop/vic/GradePending/grade_pending/app/controllers/application_controller.rb": [
+      "/Users/apprentice/Desktop/GradePending/grade_pending/app/controllers/application_controller.rb": [
         1,
         null,
         null,
         1,
         null
       ],
-      "/Users/apprentice/Desktop/vic/GradePending/grade_pending/app/models/restaurant.rb": [
+      "/Users/apprentice/Desktop/GradePending/grade_pending/app/models/restaurant.rb": [
         1,
         1,
         1,
@@ -51,7 +51,7 @@
         1,
         null,
         1,
-        2,
+        6,
         null,
         null,
         1,
@@ -59,10 +59,10 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         1,
@@ -76,6 +76,6 @@
         null
       ]
     },
-    "timestamp": 1405915020
+    "timestamp": 1405949750
   }
 }

@@ -67,5 +67,4 @@ RSpec.describe Restaurant, :type => :model do
   it "returns 'downtown' restaurants with the zipcode 10005" do
     expect(Restaurant.downtown).to eq(Restaurant.where(zipcode: "10005"))
   end
-
 end
