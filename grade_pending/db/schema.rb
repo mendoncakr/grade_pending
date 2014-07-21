@@ -34,8 +34,8 @@ ActiveRecord::Schema.define(version: 20140720192054) do
     t.string   "recorddate"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.float    "latitude"
-    t.float    "longitude"
+    t.float    "lat"
+    t.float    "long"
     t.float    "coord1"
     t.float    "coord2"
   end
