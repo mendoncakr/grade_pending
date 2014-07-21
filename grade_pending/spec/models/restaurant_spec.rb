@@ -5,14 +5,18 @@ RSpec.describe Restaurant, :type => :model do
 
   it "is valid with a camis, name, boro, building, street,  zipcode, phone, cuisinecode, inspdate, action, violcode, score, currentgrade, gradedate, recorddate" do
       expect(restaurant).to be_valid
-    end
+  end
+
+  it "is invalid without a name(camis)" do
+    expect(FactoryGirl.build(:restaurant, camis: nil)).to_not be_valid
+  end
 
   it "is invalid without a name(camis)" do
     expect(FactoryGirl.build(:restaurant, camis: nil)).to_not be_valid
   end
 
   it "is invalid without a boro" do
-    expect(FactoryGirl.build(:restaurant, boro: nil)).to_not be_valid
+    expect(FactoryGirl.build(:restaurant, camis: '')).to_not be_valid
   end
 
   it "is invalid without a building" do
@@ -55,18 +59,13 @@ RSpec.describe Restaurant, :type => :model do
     expect(FactoryGirl.build(:restaurant, currentgrade: nil)).to_not be_valid
   end
 
-
-  it "is invalid without a gradedate" do
-    expect(FactoryGirl.build(:restaurant, gradedate: nil)).to_not be_valid
-  end
-
-  it "is invalid without a recorddate" do
-    expect(FactoryGirl.build(:restaurant, recorddate: nil)).to_not be_valid
-  end
-
   it "returns a restaurant's address as a string" do
     restaurant = FactoryGirl.build :restaurant
     expect(restaurant.address).to eq "586 Broad Ave 12341"
+  end
+
+  it "returns 'downtown' restaurants with the zipcode 10005" do
+    expect(Restaurant.downtown).to eq(Restaurant.where(zipcode: "10005"))
   end
 
 end

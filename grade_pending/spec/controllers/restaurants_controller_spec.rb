@@ -13,5 +13,10 @@ RSpec.describe RestaurantsController, :type => :controller do
       get :index
       expect(response).to render_template(:index)
     end
+
+    it "returns restaurant info correctly" do
+      restaurant = FactoryGirl.build :restaurant
+      expect({:store_name=>"Sweet Eats", :store_grade=>"B", :store_zipcode=>"12341"}).to eq(restaurant.info)
+    end
   end
 end
