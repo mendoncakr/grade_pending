@@ -22,7 +22,7 @@ $(function() {
    var docHeight = $(document).height();
 
    $("body").append("<div id='overlay'></div>");
-
+   $('#overlay').append("<div id='container'><div id='welcome'>GradePending:<br> An application dedicated to informing YOU about New York City restaurant inspection grades by the Department of Health and Mental Hygiene.</div></div>");
    $("#overlay")
       .height(docHeight)
       .css({
@@ -32,12 +32,46 @@ $(function() {
          'left': 0,
          'background-color': '#222222',
          'width': '100%',
-         'z-index': 5000
+         'z-index': 5000,
+
       });
 
      $('body').click(function(e){
      	console.log("CLICK!");
      	$('#overlay').fadeOut(1000);
-     }) 
+     })
+
+     $('#welcome').css({
+      'position': 'absolute',
+      'text-align': 'center',
+      'color' : 'white',
+      'font-size' : '3em',
+      // 'width' : '100%',
+      // 'height' : '100%'
+
+     })
+
+      $('#info').css({
+      'position': 'absolute',
+      'text-align': 'center',
+      'color' : 'white',
+      'font-size' : '2em',
+      // 'width' : '50%',
+      // 'height' : '50%',
+      'border-radius': '1px solid white'
+
+     })
+
+      $('#container').css({
+      'position': 'absolute',
+      'text-align': 'center',
+      'color' : 'white',
+      'font-size' : '2em',
+      'width' : '100%',
+      'height' : '100%',
+      'border-radius': '1px solid white',
+      // 'display' : 'inline-block'
+
+     })
 
 });
